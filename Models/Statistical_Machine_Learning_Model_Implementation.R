@@ -6,7 +6,9 @@
 #' Evaluation Matrix
 performance = data.frame()
 model_summary = function(test, output, model){
+  MAPE = mape(as.vector(test),output)*100
   SMAPE = smape(as.vector(test),output)*100
+  MAE  = mae(as.vector(test),output)
   MASE = mase(as.vector(test),output)
   RMSE = rmse(as.vector(test),output)
   Evaluation = data.frame(Model = model, MAPE = MAPE, SMAPE = SMAPE, MAE = MAE, MASE = MASE, RMSE = RMSE)
