@@ -551,6 +551,6 @@ er[is.na(er)] <- 0 # Replace missing values in error with 0
 
 # Fitting PARNN model
 fit = parnn(data, er, p = 5, q = 5, repeats = 500)
-result = forecastmod.nnetar(fitt, PI = TRUE, h = 3)
+result = forecastmod.nnetar(fit, PI = TRUE, h = 3)
 
  
